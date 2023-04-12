@@ -25,7 +25,6 @@ CREATE TABLE tasks (
   deadline VARCHAR(256) NOT NULL,
   assigned_to INTEGER REFERENCES users(id),
   project_id INTEGER REFERENCES projects(id)
-
 );
 
 
