@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Employer </title>
+    <link rel="stylesheet" href="../css/employer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="task-input">
+  
+        <input type="text" placeholder="Add a new task">
+      </div>
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>  
+          <span><div class="dropdown">
+              <button class="dropbtn">Employee</button>
+              <div class="dropdown-content">
+              <a href="#">employee1</a>
+              <a href="#">employee2</a>
+              <a href="#">employee3</a>
+              </div>
+            </div>
+          </span>
+          <span><div class="dropdown">
+            <button class="dropbtn">Project</button>
+            <div class="dropdown-content">
+            <a href="#">project 1</a>
+            <a href="#">project 2</a>
+            <a href="#">project 3</a>
+            </div>
+          </div>
+        </span>
+        </div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+      <ul class="task-box"></ul>
+    </div>
+
+    <script src="employer.js"></script>
+
+  </body>
+</html>
