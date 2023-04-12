@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const { signupSchema } = require("../../validation");
 const { postUserData } = require("../../database/queries");
+const jwt = require("jsonwebtoken");
 const signUp = (req, res) => {
   const { name, email, password, confirmPassword } = req.body;
   const { error, value } = signupSchema.validate(
@@ -22,8 +23,15 @@ const signUp = (req, res) => {
       email: email,
       password: result,
     };
+    jwt.sign({ isLogged: true }, process.env.S_KEY, (err, token) => {
+      if (err) {
+        res.status(500).json({ msg: "Server Error" });
+        return;
+      } else {
+        res.cookie("cookie", token).redirect("/employees");
+      }
+    });
     postUserData(signupHash);
-    res.redirect("/signin");
   });
 };
 module.exports = { signUp };
