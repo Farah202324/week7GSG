@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="../css/signin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required class="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="email" required />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="password"
+          required
+        />
+        <label for="confirm-password">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirmPassword"
+          class="confirm-password"
+          required
+        />
+        <p>Have an account? <a href="./index.html">Sign in here.</a></p>
+        <button type="submit" class="sign-up-btn">Sign Up</button>
+      </form>
+    </div>
+    <script src="./js/fetch.js"></script>
+  </body>
+</html>
